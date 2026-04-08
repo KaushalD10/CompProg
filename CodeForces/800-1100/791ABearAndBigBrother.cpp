@@ -12,18 +12,14 @@ void fastIO()
 int main()
 {
     fastIO();
-    int n, count = 0;
-    cin >> n;
+    int a = 1, b = 1, count = 0;
+    cin >> a >> b;
 
-    for (int i = 0; i < n; i++)
+    while (b >= a)
     {
-        int a, b, c;
-        cin >> a >> b >> c;
-
-        if (a + b + c >= 2)
-        {
-            count++;
-        }
+        a *= 3;
+        b *= 2;
+        count++;
     }
 
     cout << count;
